@@ -1,17 +1,16 @@
 class Solution {
     public int maxAscendingSum(int[] nums) {
-        int i=1,n=nums.length,ans=nums[0],ma=Integer.MIN_VALUE,l=0,r=0;
-        while(i<n){
-           if(nums[i-1]<nums[i]){
-             ans+=nums[i];
-           }
-            else{
-                ma=Math.max(ma,ans);
-                ans=nums[i];
+        int i=0,sum=nums[0],m=Integer.MIN_VALUE;
+        for(i=0;i<nums.length-1;i++){
+            if(nums[i]<nums[i+1]){
+                sum+=nums[i+1];
             }
-           i++;
+            else{
+                m=Math.max(sum,m);
+                sum=nums[i+1];
+            }
         }
-        ma=Math.max(ma,ans);
-        return ma;
+        m=Math.max(sum,m);
+        return m;
     }
 }
