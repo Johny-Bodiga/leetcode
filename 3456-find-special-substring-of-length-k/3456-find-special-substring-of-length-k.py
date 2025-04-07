@@ -9,4 +9,6 @@ class Solution:
                 if c==k:
                     return True
                 c=1
+        if c==k:
+            return True
         return False
