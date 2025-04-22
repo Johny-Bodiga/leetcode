@@ -8,6 +8,8 @@ class Solution:
             for j in range(len(arr2)):
                 if abs(arr1[i]-arr2[j])<=d:
                     c1=1
+                    break
+                
             if c1==0:
                 c+=1
         return c
