@@ -22,6 +22,8 @@ class Solution {
         c+=1;
         temp=head;
         k=k%c;
+        if(k==0)
+        return head;
         while(c!=k){
             c-=1;
             if(c==k)
