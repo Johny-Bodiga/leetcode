@@ -4,6 +4,8 @@ class Solution:
         c=0
         f=0
         l=1
+        if len(s)==1:
+            return s
         while (f<len(s) and l<len(s)):
             if s[f]==s[l]:
                 c+=1 
